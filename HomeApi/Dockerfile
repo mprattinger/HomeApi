@@ -12,7 +12,7 @@ ARG BUILD_VERSION
 ARG VERSION=${BUILD_VERSION:-1.0.0}
 RUN echo "Version will be $VERSION or ${VERSION}"
 RUN apt-get update && apt-get install -y libfontconfig1
-WORKDIR /src
+WORKDIR /HomeApi
 COPY ["HomeApi.csproj", "/"]
 COPY . .
 RUN dotnet build "HomeApi.csproj" -c Release -o /app/build -p:Version=$VERSION -p:AssemblyVersion=$VERSION
