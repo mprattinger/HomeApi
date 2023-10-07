@@ -7,8 +7,10 @@
         <UserSecretsId>e9660662-3166-4ff5-8fec-aaae30b285d9</UserSecretsId>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.11">
           <PrivateAssets>all</PrivateAssets>
@@ -20,7 +22,7 @@
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="MQTTnet" Version="4.3.1.873" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     </ItemGroup>
 
 </Project>
